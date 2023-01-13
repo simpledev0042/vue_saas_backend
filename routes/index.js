@@ -4,9 +4,6 @@ const path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.sendFile(path.join('views', '/index.html'));
-});
-router.get("/*", function (req, res) {
-  res.sendFile(path.join('views', '/index.html'));
+  res.send( + path.join('public/index.html'));
 });
 module.exports = router;
