@@ -17,9 +17,9 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('*', function (req, res) {
-    let filePath = __dirname + "\\public\\" + req.originalUrl;
+    let filePath = __dirname + "/public/" + req.originalUrl;
     if( fs.existsSync(filePath) ) res.sendFile( filePath );
-    else res.sendFile( __dirname + "\\public\\index.html" );
+    else res.sendFile( __dirname + "/public/index.html" );
     
 });
 
